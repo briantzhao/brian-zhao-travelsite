@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started</title>
+    <link rel="stylesheet" href="../scss/form.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-section">
+        <h3>
+          <a href="../index.html" class="nav-section__logo">Travel Site</a>
+        </h3>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./hawaii.html">Hawaii</a></li>
+            <li>
+              <a href="./iceland.html" class="nav-section__current-link"
+                >Iceland</a
+              >
+            </li>
+            <li><a href="./greece.html">Greece</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="form">
+      <h2 class="form__title">Plan Your Next Vacation Today</h2>
+      <div class="form__contents">
+        <div class="form__text">
+          <p>Please enter your contact information below:</p>
+          <form class="trip-form" name="trip-details">
+            <label>Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              placeholder="First name and last name"
+            />
+            <label>Phone Number</label>
+            <input type="text" placeholder="Starting with the area code" />
+            <label>Email Address</label>
+            <input type="text" id="email" placeholder="email@example.com" />
+            <label>Where would you like to go?</label>
+            <div class="dropdown">
+              <select id="switch" onchange="switchLocation()">
+                <option value="0">Select a destinaton</option>
+                <option value="1">Hawaii</option>
+                <option value="2">Iceland</option>
+                <option value="3">Greece</option>
+              </select>
+            </div>
+            <button class="trip-form__button" onclick="submission()">
+              Submit
+            </button>
+            <script>
+              function submission() {
+                var name = document.getElementById("full-name").value;
+                var email = document.getElementById("email").value;
+                alert(
+                  "Thank you, " +
+                    name +
+                    ". Please expect to hear back from us via email at " +
+                    email +
+                    " shortly with your exclusive offer!"
+                );
+              }
+            </script>
+          </form>
+        </div>
+        <img
+          src="../assets/images/hero.png"
+          class="trip__image"
+          id="desImage"
+        />
+        <script>
+          function switchLocation() {
+            var locationImage = document.getElementById("switch").value;
+            switch (locationImage) {
+              case "0":
+                document
+                  .getElementById("desImage")
+                  .setAttribute("src", "../assets/images/hero.png");
+                break;
+              case "1":
+                document
+                  .getElementById("desImage")
+                  .setAttribute("src", "../assets/images/hawaii.jpg");
+
+                break;
+              case "2":
+                document
+                  .getElementById("desImage")
+                  .setAttribute("src", "../assets/images/iceland.jpg");
+
+                break;
+              case "3":
+                document
+                  .getElementById("desImage")
+                  .setAttribute("src", "../assets/images/greece.jpg");
+
+                break;
+            }
+          }
+        </script>
+      </div>
+    </div>
+    <footer>
+      <div class="contact">
+        <h3>Contact</h3>
+        <div class="contact__info">
+          <h6>EMAIL</h6>
+          <p>info@travelsite.com</p>
+        </div>
+      </div>
+      <div class="hours">
+        <h3>Hours</h3>
+        <div class="hours__info">
+          <div class="hours__weekdays">
+            <h6>MONDAY - FRIDAY</h6>
+            <p>9:00 AM - 5:00 PM</p>
+          </div>
+          <div class="hours__saturday">
+            <h6>SATURDAY</h6>
+            <p>10:00 AM - 4:00 PM</p>
+          </div>
+          <div class="hours__sunday">
+            <h6>SUNDAY</h6>
+            <p>Closed</p>
+          </div>
+        </div>
+      </div>
+      <div class="social">
+        <h3>Social</h3>
+        <div class="social__icons">
+          <a href="https://instagram.com" target="_blank"
+            ><img src="../assets/icons/icon-instagram.png"
+          /></a>
+          <a href="https://facebook.com" target="_blank"
+            ><img src="../assets/icons/icon-facebook.png"
+          /></a>
+          <a href="https://twitter.com" target="_blank"
+            ><img src="../assets/icons/icon-twitter.png"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

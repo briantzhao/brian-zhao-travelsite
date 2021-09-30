@@ -14,9 +14,6 @@
       color: black;
     }
   }
-  &__current-link {
-    @include current-page;
-  }
 }
 .hero {
   @include hero-section;
@@ -32,13 +29,20 @@
   @include rec-section;
 }
 .hawaii {
-  @include bg-image(hawaii, cover);
+  @include bg-image(hawaii);
 }
 .iceland {
-  @include bg-image(iceland, cover);
+  @include bg-image(iceland);
 }
 .greece {
-  @include bg-image(greece, cover);
+  @include bg-image(greece);
+}
+.rec-cards a {
+  opacity: 50%;
+  &:hover {
+    transition: opacity 0.3s linear;
+    opacity: 1;
+  }
 }
 footer {
   @include footer-bar;

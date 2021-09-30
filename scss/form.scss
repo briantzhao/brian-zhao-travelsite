@@ -14,35 +14,38 @@
       color: black;
     }
   }
-}
-.hawaii {
-  @include bg-image(hawaii);
-}
-.iceland {
-  @include bg-image(iceland);
-}
-.greece {
-  @include bg-image(greece);
-}
-.schedule {
-  padding: 10rem 6rem;
-  h1 {
-    color: white;
-    margin: 0 auto;
+  &__current-link {
+    @include current-page($nav-current-color);
   }
-  &__days {
-    @include flex(row, center);
-    gap: 2rem;
-    & > * {
-      padding: 1rem;
-      background-color: white;
-    }
-    div {
-      @include rec-card;
-      @include itinerary;
-    }
+}
+.form {
+  margin-top: 6rem;
+  background-color: $hero-bg-color;
+  & > * {
+    margin: 6rem;
   }
-  height: 90vh;
+  &__contents {
+    @include flex(row, space-around);
+  }
+  &__text {
+    height: 540px;
+  }
+}
+.trip-form {
+  @include flex(column, space-between);
+  width: 50vw;
+  display: flex;
+  &__button {
+    @include button;
+  }
+  & input,
+  select {
+    margin-bottom: 2rem;
+  }
+}
+.trip__image {
+  width: 33%;
+  height: 33%;
 }
 footer {
   @include footer-bar;
