@@ -4,52 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./scss/main.css" />
   </head>
   <body>
     <header>
       <div class="nav-section">
-        <h3>Travel Site</h3>
+        <h3>
+          <a href="./index.html" class="nav-section__logo">Travel Site</a>
+        </h3>
         <nav class="nav-bar">
           <ul>
-            <li>Home</li>
-            <li>Hawaii</li>
-            <li>Iceland</li>
-            <li>Greece</li>
+            <li>
+              <a href="./index.html" class="nav-section__current-link">Home</a>
+            </li>
+            <li><a href="./pages/hawaii.html">Hawaii</a></li>
+            <li><a href="./pages/iceland.html">Iceland</a></li>
+            <li><a href="./pages/greece.html">Greece</a></li>
           </ul>
         </nav>
       </div>
       <div class="hero">
         <div class="hero__text">
-          <h1 class="hero__title">Travelling Comes With Endless Discoveries</h1>
+          <h2 class="hero__title">Travelling Comes With Endless Discoveries</h2>
           <p>
             Don't let your dreams be just dreams. Experience the world by
             booking a vacation with us now.
           </p>
           <button>Get Started</button>
         </div>
-        <img src="./assets/images/hero.png" />
+        <img src="./assets/images/hero.png" class="hero__image" />
       </div>
     </header>
     <div class="recommend">
       <h3>Recommendations</h3>
       <div class="rec-cards">
-        <div class="rec-cards__hawaii">
-          <h3>Hawaii</h3>
-        </div>
-        <div class="rec-cards__iceland">
-          <h3>Iceland</h3>
-        </div>
-        <div class="rec-cards__Greece">
-          <h3>Greece</h3>
-        </div>
+        <a href="./pages/hawaii.html">
+          <div class="hawaii">
+            <h3>Hawaii</h3>
+          </div>
+        </a>
+        <a href="./pages/iceland.html">
+          <div class="iceland">
+            <h3>Iceland</h3>
+          </div>
+        </a>
+        <a href="./pages/greece.html">
+          <div class="greece">
+            <h3>Greece</h3>
+          </div>
+        </a>
       </div>
     </div>
     <footer>
       <div class="contact">
         <h3>Contact</h3>
         <div class="contact__info">
-          <p>EMAIL</p>
+          <h6>EMAIL</h6>
           <p>info@travelsite.com</p>
         </div>
       </div>
@@ -57,15 +68,15 @@
         <h3>Hours</h3>
         <div class="hours__info">
           <div class="hours__weekdays">
-            <p>MONDAY - FRIDAY</p>
+            <h6>MONDAY - FRIDAY</h6>
             <p>9:00 AM - 5:00 PM</p>
           </div>
           <div class="hours__saturday">
-            <p>SATURDAY</p>
+            <h6>SATURDAY</h6>
             <p>10:00 AM - 4:00 PM</p>
           </div>
           <div class="hours__sunday">
-            <p>SUNDAY</p>
+            <h6>SUNDAY</h6>
             <p>Closed</p>
           </div>
         </div>

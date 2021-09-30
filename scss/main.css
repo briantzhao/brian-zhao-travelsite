@@ -1,2 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.nav-section {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #335576;
+  width: 100vw;
+  padding: 0 6rem;
+  z-index: 1000;
+}
+.nav-section__logo {
+  color: #335576;
+}
+.nav-section ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.nav-section ul a {
+  color: black;
+}
+.nav-section__current-link {
+  border-bottom: 4px solid #db7a4e;
+  padding-bottom: 0.5rem;
+}
+
+.hero {
+  background-color: #fefaf5;
+  text-align: left;
+  color: #335576;
+  padding: 10rem 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero button {
+  background-color: #db7a4e;
+  border-radius: 16px;
+  color: white;
+  border: 0px;
+  padding: 0.5rem 2rem;
+}
+.hero__text {
+  width: 50%;
+}
+.hero__image {
+  width: 33%;
+  height: 33%;
+}
+
+.recommend {
+  padding-bottom: 6rem;
+}
+.recommend > h3 {
+  color: #335576;
+  padding-left: 6rem;
+}
+.recommend > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.recommend > div div {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 50vh;
+  width: 22vw;
+}
+.recommend > div div h3 {
+  position: absolute;
+  color: white;
+  margin-bottom: 0;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.hawaii {
+  background: url("../assets/images/hawaii.jpg");
+  background-size: cover;
+}
+
+.iceland {
+  background: url("../assets/images/iceland.jpg");
+  background-size: cover;
+}
+
+.greece {
+  background: url("../assets/images/greece.jpg");
+  background-size: cover;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #fefaf5;
+  padding-left: 12rem;
+  padding-right: 9rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+footer h3 {
+  color: #335576;
+}
+footer h6 {
+  color: #db7a4e;
+  margin: 0 auto;
+}
+footer p {
+  margin: 0.5rem auto;
+}
+
+.hours {
+  width: 30vw;
+}
+.hours__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 6rem;
+}
+.social__icons * {
+  height: 1rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,59 @@
+@use "./partials/global";
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+.nav-section {
+  @include nav-bar;
+  &__logo {
+    color: $nav-text-color;
+  }
+  ul {
+    @include flex(row, space-between);
+    gap: 2rem;
+    a {
+      color: black;
+    }
+  }
+  &__current-link {
+    @include current-page;
+  }
+}
+.hero {
+  @include hero-section;
+  &__text {
+    width: 50%;
+  }
+  &__image {
+    width: 33%;
+    height: 33%;
+  }
+}
+.recommend {
+  @include rec-section;
+}
+.hawaii {
+  @include bg-image(hawaii, cover);
+}
+.iceland {
+  @include bg-image(iceland, cover);
+}
+.greece {
+  @include bg-image(greece, cover);
+}
+footer {
+  @include footer-bar;
+}
+.hours {
+  width: 30vw;
+  &__info {
+    @include flex(row, space-between);
+  }
+}
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  * {
+    height: 1rem;
+  }
+  width: 6rem;
+}

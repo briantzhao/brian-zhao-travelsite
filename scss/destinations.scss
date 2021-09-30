@@ -1,0 +1,66 @@
+@use "./partials/global";
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+.nav-section {
+  @include nav-bar;
+  &__logo {
+    color: $nav-text-color;
+  }
+  ul {
+    @include flex(row, space-between);
+    gap: 2rem;
+    a {
+      color: black;
+    }
+  }
+  &__current-link {
+    @include current-page;
+  }
+}
+.hawaii {
+  @include bg-image(hawaii, 100vw 100vh);
+}
+.iceland {
+  @include bg-image(iceland, 100vw 100vh);
+}
+.greece {
+  @include bg-image(greece, 100vw 100vh);
+}
+.schedule {
+  padding: 10rem 6rem;
+  h1 {
+    color: white;
+    margin: 0 auto;
+  }
+  &__days {
+    @include flex(row, center);
+    gap: 2rem;
+    & > * {
+      padding: 1rem;
+      background-color: white;
+    }
+    div {
+      @include rec-card;
+      @include itinerary;
+    }
+  }
+  height: 100vh;
+}
+footer {
+  @include footer-bar;
+}
+.hours {
+  width: 30vw;
+  &__info {
+    @include flex(row, space-between);
+  }
+}
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  * {
+    height: 1rem;
+  }
+  width: 6rem;
+}
