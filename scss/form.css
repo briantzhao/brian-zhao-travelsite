@@ -33,7 +33,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -72,10 +72,6 @@ h4 {
 .nav-section ul a {
   color: black;
 }
-.nav-section__current-link {
-  border-bottom: 4px solid #db7a4e;
-  padding-bottom: 0.5rem;
-}
 
 .form {
   margin-top: 6rem;
@@ -91,7 +87,7 @@ h4 {
   justify-content: space-around;
 }
 .form__text {
-  height: 540px;
+  height: 33.75rem;
 }
 
 .trip-form {

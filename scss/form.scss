@@ -2,6 +2,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+//navigation bar styling
 .nav-section {
   @include nav-bar;
   &__logo {
@@ -14,10 +15,9 @@
       color: black;
     }
   }
-  &__current-link {
-    @include current-page($nav-current-color);
-  }
 }
+
+//styling for main section
 .form {
   margin-top: 6rem;
   background-color: $hero-bg-color;
@@ -28,10 +28,13 @@
   &__contents {
     @include flex(row, space-around);
   }
+  //ensure form is same height as image
   &__text {
-    height: 540px;
+    height: 33.75rem;
   }
 }
+
+//styling for actual form
 .trip-form {
   @include flex(column, space-between);
   width: 50vw;
@@ -44,19 +47,27 @@
     margin-bottom: 2rem;
   }
 }
+
+//sizing for the image
 .trip__image {
   width: 33%;
   height: 33%;
 }
+
+//footer styling
 footer {
   @include footer-bar;
 }
+
+//hours information
 .hours {
   width: 30vw;
   &__info {
     @include flex(row, space-between);
   }
 }
+
+//social media logos
 .social__icons {
   display: flex;
   justify-content: space-between;

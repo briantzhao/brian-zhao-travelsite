@@ -33,7 +33,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -92,12 +92,12 @@ h4 {
 }
 
 .schedule {
-  padding: 10rem 6rem;
-  height: 100vh;
+  padding: 6rem 6rem;
+  height: 90vh;
 }
 .schedule h1 {
   color: white;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 .schedule__days {
   display: flex;
@@ -109,32 +109,32 @@ h4 {
   padding: 1rem;
   background-color: white;
 }
-.schedule__days div {
+.schedule__days article {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   position: relative;
-  height: 60vh;
-  width: 18vw;
+  height: 45vh;
+  width: 20vw;
   display: flex;
   flex-direction: column;
 }
-.schedule__days div h3 {
+.schedule__days article h3 {
   text-align: center;
   border-bottom: 4px solid black;
   margin: 0;
 }
-.schedule__days div h4 {
+.schedule__days article h4 {
   margin: 0;
 }
-.schedule__days div ul {
+.schedule__days article ul {
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex: 1;
 }
-.schedule__days div ul li {
+.schedule__days article ul li {
   text-align: center;
   background-color: #fefaf5;
   padding: 1rem;

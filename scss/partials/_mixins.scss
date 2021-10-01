@@ -1,4 +1,6 @@
 @use "./variables" as *;
+
+//navigation section mixin
 @mixin nav-bar {
   position: fixed;
   top: 0;
@@ -9,21 +11,28 @@
   width: 100vw;
   padding: 0 6rem;
   z-index: 1000;
+  //nav link base styling
   nav a {
     border-bottom: 0;
     transition-duration: 0.5s;
+    //nav link animation
     &:hover {
       @include current-page($nav-text-color);
     }
   }
+  //nav link current page underline
   .nav-section__current-link {
     @include current-page($nav-current-color);
   }
 }
+
+//mixin for nav link underline
 @mixin current-page($color) {
   border-bottom: 4px solid $color;
   padding-bottom: 0.5rem;
 }
+
+//mixin for footer styling
 @mixin footer-bar {
   @include flex(row, space-around);
   background-color: $footer-bg-color;
@@ -31,17 +40,22 @@
   padding-right: 9rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  //footer section headers
   h3 {
     color: $footer-title-color;
   }
+  //footer email and days headers
   h6 {
     color: $footer-subtitle-color;
     margin: 0 auto;
   }
+  // footer email and days info
   p {
     margin: 0.5rem auto;
   }
 }
+
+//landing page hero section
 @mixin hero-section {
   background-color: $hero-bg-color;
   text-align: left;
@@ -52,17 +66,22 @@
     @include button;
   }
 }
+
+//landing page recommendations section
 @mixin rec-section {
   padding-bottom: 6rem;
+  //styling for recommendations tag
   & > h3 {
     color: $rec-title-color;
     padding-left: 6rem;
   }
-  & > div {
+  //recommendation section card styling
+  section {
     @include flex(row, center);
     gap: 2rem;
-    div {
+    article {
       @include rec-card;
+      // card location name styling
       h3 {
         position: absolute;
         color: white;
@@ -74,17 +93,24 @@
   }
 }
 
+//styling for main schedule section
 @mixin itinerary {
   display: flex;
   flex-direction: column;
+
+  //styling for day of the week
   h3 {
     text-align: center;
     border-bottom: 4px solid black;
     margin: 0;
   }
+
+  //items in the schedule
   h4 {
     margin: 0;
   }
+
+  //list of schedule items
   ul {
     padding: 0;
     @include flex(column, space-around);
@@ -97,19 +123,26 @@
   }
 }
 
+//GENERAL MIXINS
+
+//general flex mixin
 @mixin flex($direction, $justify) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
 }
+
+//general card mixin
 @mixin rec-card {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   position: relative;
-  height: 60vh;
-  width: 18vw;
+  height: 45vh;
+  width: 20vw;
 }
+
+//general mixin for applying backgrounds to divs
 @mixin bg-image($place) {
   $url: "../assets/images/#{$place}.jpg";
   background: url($url);
@@ -117,6 +150,7 @@
   background-position: center;
 }
 
+//general mixin for buttons
 @mixin button {
   background-color: $hero-button-color;
   border-radius: 1.25rem;

@@ -27,8 +27,8 @@
     </header>
     <div class="form">
       <h2 class="form__title">Plan Your Next Vacation Today</h2>
-      <div class="form__contents">
-        <div class="form__text">
+      <section class="form__contents">
+        <article class="form__text">
           <p>Please enter your contact information below:</p>
           <form class="trip-form" name="trip-details">
             <label>Full Name</label>
@@ -54,6 +54,7 @@
               Submit
             </button>
             <script>
+              //creates alert using submitted name and email
               function submission() {
                 var name = document.getElementById("full-name").value;
                 var email = document.getElementById("email").value;
@@ -67,13 +68,14 @@
               }
             </script>
           </form>
-        </div>
+        </article>
         <img
           src="../assets/images/hero.png"
           class="trip__image"
           id="desImage"
         />
         <script>
+          // Brings up picture of location selected in dropdown menu in id=desImage
           function switchLocation() {
             var locationImage = document.getElementById("switch").value;
             switch (locationImage) {
@@ -103,36 +105,36 @@
             }
           }
         </script>
-      </div>
+      </section>
     </div>
     <footer>
       <div class="contact">
         <h3>Contact</h3>
-        <div class="contact__info">
+        <section class="contact__info">
           <h6>EMAIL</h6>
           <p>info@travelsite.com</p>
-        </div>
+        </section>
       </div>
       <div class="hours">
         <h3>Hours</h3>
-        <div class="hours__info">
-          <div class="hours__weekdays">
+        <section class="hours__info">
+          <article class="hours__weekdays">
             <h6>MONDAY - FRIDAY</h6>
             <p>9:00 AM - 5:00 PM</p>
-          </div>
-          <div class="hours__saturday">
+          </article>
+          <article class="hours__saturday">
             <h6>SATURDAY</h6>
             <p>10:00 AM - 4:00 PM</p>
-          </div>
-          <div class="hours__sunday">
+          </article>
+          <article class="hours__sunday">
             <h6>SUNDAY</h6>
             <p>Closed</p>
-          </div>
-        </div>
+          </article>
+        </section>
       </div>
       <div class="social">
         <h3>Social</h3>
-        <div class="social__icons">
+        <section class="social__icons">
           <a href="https://instagram.com" target="_blank"
             ><img src="../assets/icons/icon-instagram.png"
           /></a>
@@ -142,7 +144,7 @@
           <a href="https://twitter.com" target="_blank"
             ><img src="../assets/icons/icon-twitter.png"
           /></a>
-        </div>
+        </section>
       </div>
     </footer>
   </body>

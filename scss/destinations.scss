@@ -2,6 +2,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+//navigation bar styling
 .nav-section {
   @include nav-bar;
   &__logo {
@@ -15,21 +16,27 @@
     }
   }
 }
+
+//background images for different pages
 .hawaii {
   @include bg-image(hawaii);
 }
+
 .iceland {
   @include bg-image(iceland);
 }
+
 .greece {
   @include bg-image(greece);
 }
+
+//styling for main section of pages
 .schedule {
-  padding: 10rem 6rem;
-  height: 100vh;
+  padding: 6rem 6rem;
+  height: 90vh;
   h1 {
     color: white;
-    margin: 0 auto;
+    margin: 4rem auto;
   }
   &__days {
     @include flex(row, center);
@@ -38,21 +45,27 @@
       padding: 1rem;
       background-color: white;
     }
-    div {
+    article {
       @include rec-card;
       @include itinerary;
     }
   }
 }
+
+//footer styling
 footer {
   @include footer-bar;
 }
+
+//hours information
 .hours {
   width: 30vw;
   &__info {
     @include flex(row, space-between);
   }
 }
+
+//social media icons
 .social__icons {
   display: flex;
   justify-content: space-between;

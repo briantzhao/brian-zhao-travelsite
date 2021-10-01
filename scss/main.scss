@@ -2,6 +2,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+//navigation menu
 .nav-section {
   @include nav-bar;
   &__logo {
@@ -15,6 +16,8 @@
     }
   }
 }
+
+//hero section
 .hero {
   @include hero-section;
   &__text {
@@ -25,18 +28,22 @@
     height: 33%;
   }
 }
+
+//recommended section
 .recommend {
   @include rec-section;
+  &__hawaii {
+    @include bg-image(hawaii);
+  }
+  &__iceland {
+    @include bg-image(iceland);
+  }
+  &__greece {
+    @include bg-image(greece);
+  }
 }
-.hawaii {
-  @include bg-image(hawaii);
-}
-.iceland {
-  @include bg-image(iceland);
-}
-.greece {
-  @include bg-image(greece);
-}
+
+//individual cards in the recommendations section
 .rec-cards a {
   opacity: 50%;
   &:hover {
@@ -44,15 +51,21 @@
     opacity: 1;
   }
 }
+
+//footer styling
 footer {
   @include footer-bar;
 }
+
+//styling for hours information
 .hours {
   width: 30vw;
   &__info {
     @include flex(row, space-between);
   }
 }
+
+//styling for socials icons
 .social__icons {
   display: flex;
   justify-content: space-between;
