@@ -73,6 +73,46 @@ h4 {
   color: black;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #fefaf5;
+  padding-left: 12rem;
+  padding-right: 9rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+footer h3 {
+  color: #335576;
+}
+footer h6 {
+  color: #db7a4e;
+  margin: 0 auto;
+}
+footer p {
+  margin: 0.5rem auto;
+  color: #335576;
+}
+
+.hours {
+  width: 35vw;
+}
+.hours__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
+}
+.social__icons * {
+  height: 1.5rem;
+}
+
 .form {
   margin-top: 6rem;
   background-color: #fefaf5;
@@ -112,44 +152,4 @@ h4 {
 .trip__image {
   width: 33%;
   height: 33%;
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #fefaf5;
-  padding-left: 12rem;
-  padding-right: 9rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-footer h3 {
-  color: #335576;
-}
-footer h6 {
-  color: #db7a4e;
-  margin: 0 auto;
-}
-footer p {
-  margin: 0.5rem auto;
-  color: #335576;
-}
-
-.hours {
-  width: 30vw;
-}
-.hours__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.social__icons {
-  display: flex;
-  justify-content: space-between;
-  width: 6rem;
-}
-.social__icons * {
-  height: 1.5rem;
 }/*# sourceMappingURL=form.css.map */
