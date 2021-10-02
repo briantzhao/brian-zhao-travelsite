@@ -2,21 +2,6 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-//navigation menu
-.nav-section {
-  @include nav-bar;
-  &__logo {
-    color: $nav-text-color;
-  }
-  ul {
-    @include flex(row, space-between);
-    gap: 2rem;
-    a {
-      color: black;
-    }
-  }
-}
-
 //hero section
 .hero {
   @include hero-section;
@@ -50,27 +35,4 @@
     transition: opacity 0.3s linear;
     opacity: 1;
   }
-}
-
-//footer styling
-footer {
-  @include footer-bar;
-}
-
-//styling for hours information
-.hours {
-  width: 30vw;
-  &__info {
-    @include flex(row, space-between);
-  }
-}
-
-//styling for socials icons
-.social__icons {
-  display: flex;
-  justify-content: space-between;
-  * {
-    height: 1.5rem;
-  }
-  width: 6rem;
 }

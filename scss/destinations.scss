@@ -2,21 +2,6 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-//navigation bar styling
-.nav-section {
-  @include nav-bar;
-  &__logo {
-    color: $nav-text-color;
-  }
-  ul {
-    @include flex(row, space-between);
-    gap: 2rem;
-    a {
-      color: black;
-    }
-  }
-}
-
 //background images for different pages
 .hawaii {
   @include bg-image(hawaii);
@@ -50,27 +35,4 @@
       @include itinerary;
     }
   }
-}
-
-//footer styling
-footer {
-  @include footer-bar;
-}
-
-//hours information
-.hours {
-  width: 30vw;
-  &__info {
-    @include flex(row, space-between);
-  }
-}
-
-//social media icons
-.social__icons {
-  display: flex;
-  justify-content: space-between;
-  * {
-    height: 1.5rem;
-  }
-  width: 6rem;
 }
