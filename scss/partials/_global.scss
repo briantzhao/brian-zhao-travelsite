@@ -38,6 +38,11 @@ h4 {
   @include nav-bar;
   &__logo {
     color: $nav-text-color;
+
+    //hide logo for tablet or smaller
+    @include tablet {
+      display: none;
+    }
   }
   ul {
     @include flex(row, space-between);
@@ -51,6 +56,11 @@ h4 {
 //footer styling
 footer {
   @include footer-bar;
+
+  //change flex direction to column in mobile
+  @include mobile {
+    @include flex(column, center);
+  }
 }
 
 //hours information
@@ -58,6 +68,11 @@ footer {
   width: 35vw;
   &__info {
     @include flex(row, space-between);
+
+    //increase hours info width for mobile
+    @include mobile {
+      width: 90vw;
+    }
   }
 }
 
@@ -67,6 +82,12 @@ footer {
   justify-content: space-between;
   * {
     height: 1.5rem;
+
+    //increase social media icons for mobile
+    @include mobile {
+      height: auto;
+      margin: 2rem;
+    }
   }
   width: 8rem;
 }

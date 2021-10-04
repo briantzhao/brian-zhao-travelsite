@@ -18,14 +18,30 @@
 //styling for main section of pages
 .schedule {
   padding: 6rem 6rem;
-  height: 90vh;
+  height: 110vh;
+
+  //increase background picture size to accommodate column schedules
+  @include mobile {
+    height: 220vh;
+  }
   h1 {
     color: white;
     margin: 4rem auto;
+
+    //reduce h1 space for tablet or smaller
+    @include tablet {
+      margin: 0 auto;
+    }
   }
   &__days {
     @include flex(row, center);
     gap: 2rem;
+
+    //change schedule to flex column for mobile
+    @include mobile {
+      @include flex(column, center);
+    }
+
     & > * {
       padding: 1rem;
       background-color: white;

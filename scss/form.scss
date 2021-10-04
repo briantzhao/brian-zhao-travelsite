@@ -10,9 +10,21 @@
   & > * {
     margin: 6rem;
   }
-  &__contents {
-    @include flex(row, space-around);
+
+  &__title {
+    //reduce title size for mobile
+    @include mobile {
+      font-size: 2rem;
+    }
   }
+  &__contents {
+    //change to column for tablet and smaller
+    @include tablet {
+      @include flex(column, center);
+      align-items: center;
+    }
+  }
+
   //ensure form is same height as image
   &__text {
     height: 33.75rem;
@@ -37,4 +49,9 @@
 .trip__image {
   width: 33%;
   height: 33%;
+
+  //move image to the top for tablet or smaller
+  @include tablet {
+    order: -1;
+  }
 }

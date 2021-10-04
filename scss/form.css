@@ -41,12 +41,18 @@ h4 {
   position: fixed;
   top: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
   color: #335576;
   width: 100vw;
   padding: 0 6rem;
   z-index: 1000;
+}
+@media (max-width: 1023px) {
+  .nav-section {
+    justify-content: center;
+  }
 }
 .nav-section nav a {
   border-bottom: 0;
@@ -62,6 +68,11 @@ h4 {
 }
 .nav-section__logo {
   color: #335576;
+}
+@media (max-width: 1023px) {
+  .nav-section__logo {
+    display: none;
+  }
 }
 .nav-section ul {
   display: flex;
@@ -83,6 +94,16 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+@media (max-width: 1023px) {
+  footer {
+    padding: 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer > * {
+    margin: 0 1rem;
+  }
+}
 footer h3 {
   color: #335576;
 }
@@ -94,6 +115,18 @@ footer p {
   margin: 0.5rem auto;
   color: #335576;
 }
+@media (max-width: 1023px) {
+  footer .hours {
+    flex: 1;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .hours {
   width: 35vw;
@@ -102,6 +135,11 @@ footer p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .hours__info {
+    width: 90vw;
+  }
 }
 
 .social__icons {
@@ -112,6 +150,12 @@ footer p {
 .social__icons * {
   height: 1.5rem;
 }
+@media (max-width: 767px) {
+  .social__icons * {
+    height: auto;
+    margin: 2rem;
+  }
+}
 
 .form {
   margin-top: 6rem;
@@ -121,10 +165,18 @@ footer p {
 .form > * {
   margin: 6rem;
 }
-.form__contents {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+@media (max-width: 767px) {
+  .form__title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1023px) {
+  .form__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .form__text {
   height: 33.75rem;
@@ -152,4 +204,9 @@ footer p {
 .trip__image {
   width: 33%;
   height: 33%;
+}
+@media (max-width: 1023px) {
+  .trip__image {
+    order: -1;
+  }
 }/*# sourceMappingURL=form.css.map */

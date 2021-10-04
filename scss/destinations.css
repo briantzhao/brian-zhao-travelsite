@@ -41,12 +41,18 @@ h4 {
   position: fixed;
   top: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
   color: #335576;
   width: 100vw;
   padding: 0 6rem;
   z-index: 1000;
+}
+@media (max-width: 1023px) {
+  .nav-section {
+    justify-content: center;
+  }
 }
 .nav-section nav a {
   border-bottom: 0;
@@ -62,6 +68,11 @@ h4 {
 }
 .nav-section__logo {
   color: #335576;
+}
+@media (max-width: 1023px) {
+  .nav-section__logo {
+    display: none;
+  }
 }
 .nav-section ul {
   display: flex;
@@ -83,6 +94,16 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+@media (max-width: 1023px) {
+  footer {
+    padding: 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer > * {
+    margin: 0 1rem;
+  }
+}
 footer h3 {
   color: #335576;
 }
@@ -94,6 +115,18 @@ footer p {
   margin: 0.5rem auto;
   color: #335576;
 }
+@media (max-width: 1023px) {
+  footer .hours {
+    flex: 1;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .hours {
   width: 35vw;
@@ -103,6 +136,11 @@ footer p {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .hours__info {
+    width: 90vw;
+  }
+}
 
 .social__icons {
   display: flex;
@@ -111,6 +149,12 @@ footer p {
 }
 .social__icons * {
   height: 1.5rem;
+}
+@media (max-width: 767px) {
+  .social__icons * {
+    height: auto;
+    margin: 2rem;
+  }
 }
 
 .hawaii {
@@ -133,17 +177,34 @@ footer p {
 
 .schedule {
   padding: 6rem 6rem;
-  height: 90vh;
+  height: 110vh;
+}
+@media (max-width: 767px) {
+  .schedule {
+    height: 220vh;
+  }
 }
 .schedule h1 {
   color: white;
   margin: 4rem auto;
+}
+@media (max-width: 1023px) {
+  .schedule h1 {
+    margin: 0 auto;
+  }
 }
 .schedule__days {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+}
+@media (max-width: 767px) {
+  .schedule__days {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .schedule__days > * {
   padding: 1rem;
@@ -158,6 +219,12 @@ footer p {
   width: 20vw;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 1023px) {
+  .schedule__days article {
+    width: 80vw;
+  }
 }
 .schedule__days article h3 {
   text-align: center;
@@ -178,4 +245,9 @@ footer p {
   text-align: center;
   background-color: #fefaf5;
   padding: 1rem;
+}
+@media (max-width: 1023px) {
+  .schedule__days article ul li {
+    padding: 0;
+  }
 }/*# sourceMappingURL=destinations.css.map */
