@@ -19,6 +19,7 @@
   }
   &__contents {
     //change to column for tablet and smaller
+    @include flex(row, space-between);
     @include tablet {
       @include flex(column, center);
       align-items: center;

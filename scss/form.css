@@ -170,6 +170,11 @@ footer p {
     font-size: 2rem;
   }
 }
+.form__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media (max-width: 1023px) {
   .form__contents {
     display: flex;
